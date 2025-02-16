@@ -12,7 +12,7 @@ function App() {
         <Users />
       </div>
       <div>
-        {/* Open-Closed Pricniple */}
+        {/* Open-Closed Prinсiple */}
         <Page />
       </div>
     </>
