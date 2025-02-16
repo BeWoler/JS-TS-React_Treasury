@@ -1,6 +1,7 @@
 import "./App.css";
-import { Posts } from "./S/Posts";
-import { Users } from "./S/Users";
+import { Page } from "./Open_Closed/Page";
+import { Posts } from "./Single_Responsibility/Posts";
+import { Users } from "./Single_Responsibility/Users";
 
 function App() {
   return (
@@ -9,6 +10,10 @@ function App() {
         {/* Single Responsibility Principle */}
         <Posts />
         <Users />
+      </div>
+      <div>
+        {/* Open-Closed Pricniple */}
+        <Page />
       </div>
     </>
   );
