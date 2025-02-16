@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { TPost } from "./type";
 import { PostsList } from "./PostsList";
 
-// The right approach, we separated rendering and data acquisition, made them separate components
+// The right approach, we separated rendering and data receiving, made them separate components
 
 export const Posts = () => {
   const [posts, setPosts] = useState<TPost[]>([]);

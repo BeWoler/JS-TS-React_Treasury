@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { UsersList } from "./UsersList";
 import { TUser } from "./type";
 
-// The right approach, we separated rendering and data acquisition, made them separate components
+// The right approach, we separated rendering and data receiving, made them separate components
 
 export const Users = () => {
   const [users, setUsers] = useState<TUser[]>([]);
