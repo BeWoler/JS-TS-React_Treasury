@@ -2,6 +2,8 @@ import "./App.css";
 import { DataProvider } from "./renderPropsPattern/DataProvider";
 import { Toggle } from "./renderPropsPattern/Toggle";
 import { Layout } from "./slotsPattern/Layout";
+import { Accordion } from "./сompositeComponents/Accordion";
+import { AccordionItem } from "./сompositeComponents/AccordionItem";
 
 function App() {
   return (
@@ -41,6 +43,18 @@ function App() {
           content={<p>Main content goes here...</p>}
         />
       </div>
+      {/* Composite Components Pattern */}
+      <Accordion>
+        <AccordionItem title='Item 1'>
+          <p>This is the content of item 1</p>
+        </AccordionItem>
+        <AccordionItem title='Item 2'>
+          <p>This is the content of item 2</p>
+        </AccordionItem>
+        <AccordionItem title='Item 3'>
+          <p>This is the content of item 3</p>
+        </AccordionItem>
+      </Accordion>
     </>
   );
 }
