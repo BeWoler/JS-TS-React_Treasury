@@ -1,5 +1,7 @@
 import "./App.css";
 import { DataFetcher } from "./functionAsAChild/DataFetcher";
+import { AuthProxy } from "./proxyComponent/AuthProxy";
+import { Dashboard } from "./proxyComponent/Dashboard";
 import { DataProvider } from "./renderPropsPattern/DataProvider";
 import { Toggle } from "./renderPropsPattern/Toggle";
 import { Layout } from "./slotsPattern/Layout";
@@ -7,6 +9,8 @@ import { Accordion } from "./сompositeComponents/Accordion";
 import { AccordionItem } from "./сompositeComponents/AccordionItem";
 
 function App() {
+  const userIsAuthenticated = false; // true if user is authenticated
+
   return (
     <>
       {/* renderProps pattern */}
@@ -60,14 +64,14 @@ function App() {
       <DataFetcher url='https://jsonplaceholder.typicode.com/todos/1'>
         {(data, loading) => (
           <div>
-            {loading ? (
-              <p>Loading...</p>
-            ) : (
-              <p>Data: {JSON.stringify(data)}</p>
-            )}
+            {loading ? <p>Loading...</p> : <p>Data: {JSON.stringify(data)}</p>}
           </div>
         )}
       </DataFetcher>
+      {/* Proxy Component Pattern */}
+      <AuthProxy isAuthenticated={userIsAuthenticated}>
+        <Dashboard />
+      </AuthProxy>
     </>
   );
 }
