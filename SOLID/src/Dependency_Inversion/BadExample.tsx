@@ -1,7 +1,3 @@
-// High-level modules should not depend on low-level modules
-// Both should depend on abstractions
-// Abstractions should not depend on details. Details should depend on abstractions
-
 // UserService is tightly bound to HttpClient 
 // If we want to replace HttpClient with another HTTP client (e.g. axios), 
 // we will have to change the UserService code

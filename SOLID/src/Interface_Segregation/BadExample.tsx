@@ -1,9 +1,5 @@
 import { IUserActions } from "./type";
 
-// A class (or component) should not be forced to implement interfaces 
-// it does not use. Instead of one large interface, it is better to have 
-// multiple smaller, more specific interfaces
-
 // The GuestProfile component is forced to 
 // implement the login() method, which it doesn't need
 
