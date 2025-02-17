@@ -7,6 +7,7 @@ import {
 } from "./Liskov/Page";
 import { Posts } from "./Single_Responsibility/Posts";
 import { Users } from "./Single_Responsibility/Users";
+import { UserProfile } from "./Dependency_Inversion/components/UserProfile";
 
 function App() {
   return (
@@ -40,6 +41,10 @@ function App() {
             { id: 1, name: "Jhon" },
           ]}
         />
+      </div>
+      <div>
+        {/* Dependency Inversion Prinсiple */}
+        <UserProfile />
       </div>
     </>
   );
