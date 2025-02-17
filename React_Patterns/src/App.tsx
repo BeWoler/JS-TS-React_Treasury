@@ -1,4 +1,5 @@
 import "./App.css";
+import { DataFetcher } from "./functionAsAChild/DataFetcher";
 import { DataProvider } from "./renderPropsPattern/DataProvider";
 import { Toggle } from "./renderPropsPattern/Toggle";
 import { Layout } from "./slotsPattern/Layout";
@@ -55,6 +56,18 @@ function App() {
           <p>This is the content of item 3</p>
         </AccordionItem>
       </Accordion>
+      {/* Function as a Child Pattern */}
+      <DataFetcher url='https://jsonplaceholder.typicode.com/todos/1'>
+        {(data, loading) => (
+          <div>
+            {loading ? (
+              <p>Loading...</p>
+            ) : (
+              <p>Data: {JSON.stringify(data)}</p>
+            )}
+          </div>
+        )}
+      </DataFetcher>
     </>
   );
 }
