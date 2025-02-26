@@ -38,3 +38,49 @@ src/
  ├── index.js
  ├── App.js
 ```
+
+## Layers Explanation
+
+1. Domain Layer (domain/)
+
+- Core business logic and rules.
+- Independent of frameworks and UI.
+- Contains entities, use cases, and repository interfaces.
+
+2. Data Layer (data/)
+
+- Implements repositories, API calls, and database interactions.
+- Responsible for fetching and transforming data.
+
+3. Presentation Layer (presentation/)
+
+- Handles UI and state management.
+- Uses domain logic to interact with data.
+
+4. Infrastructure Layer (infrastructure/)
+
+- Deals with external concerns like routing, services, and environment configurations.
+
+5. Application Layer (app/)
+
+- Initializes dependencies and configurations.
+- Acts as the entry point for the application.
+
+## When to Use Clean Architecture?
+
+- When developing large-scale applications with complex business logic.
+
+- When needing clear separation between business rules and UI.
+
+- When working in teams requiring modular and maintainable code.
+
+## Benefits
+
+✅ Testability - Business logic can be tested in isolation.
+✅ Maintainability - Code is structured for easy modifications.
+✅ Scalability - Architecture supports growth without major refactoring.
+✅ Separation of Concerns - Different responsibilities are clearly defined.
+
+## Conclusion
+
+Clean Architecture helps frontend developers build scalable and maintainable applications by enforcing separation of concerns and dependency inversion. Following this methodology ensures that applications remain adaptable and robust over time.
